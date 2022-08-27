@@ -1,14 +1,6 @@
 from fractions import Fraction
 from colores import RED, WHITE
 
-def PrintMatriz(matriz:list):
-    nuevaMatriz = []
-    for i in range(len(matriz)):
-        nuevaMatriz.append([])
-        for j in matriz[i]:
-            nuevaMatriz[i].append(str(j))
-    for i in nuevaMatriz:
-        print(i)
 def Matriz(n:int,m:int):
     vector = []
     for i in range(n):
