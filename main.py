@@ -1,12 +1,12 @@
 from colorama import Cursor, init, Fore
 from fractions import Fraction
 from funciones import printMatriz, Matriz, interCambioDeFilas, escalarXfila, operacionEntreFila
-from colores import YELLOW,CYAN, MAGENTA, BLUE, GREEN ,WHITE
+from colores import YELLOW,CYAN, MAGENTA, BLUE, GREEN,RED ,WHITE
 
 def main():
     print(GREEN+'='*20+'Cargar Matriz'+'='*20+WHITE);matriz = Matriz(int(input('ingrese la cantidad de filas: ')), int(input('ingrese la cantidad de columnas: ')))
     printMatriz(matriz)
-    print(CYAN+'='*60);opciones = int(input('Opcion 1: intercambio de fila\nOpcion 2: fila por un escalar\nOpcion 3: operacion elemental entre filas\n4- Mostrar Matriz\nPresionar 0 para finalizar el programa\n opcion: '));print('='*60+WHITE)
+    print(CYAN+'='*60);opciones = int(input('Opcion 1: intercambio de fila\nOpcion 2: fila por un escalar\nOpcion 3: operacion elemental entre filas\nOpcion 4: Mostrar Matriz\nPresionar 0 para finalizar el programa\n opcion: '));print('='*60+WHITE)
     while opciones != 0:
         printMatriz(matriz)
         if opciones == 1:
@@ -39,11 +39,10 @@ def main():
             print()
         if opciones == 4:
             print(CYAN+'='*20+f'Matriz {len(matriz)}x{len(matriz[0])}'+'='*20+WHITE)
-            printMatriz(matriz)
-            input(f'\n{CYAN}+ presione enter para continuar')
+            input(f'\n{RED}presione enter para continuar{WHITE}')
         if opciones == 5:
             print(GREEN+'='*20+'Cargar Nueva Matriz'+'='*20+WHITE)
             matriz = Matriz(int(input('ingrese el numero de fila de la nueva matriz: ')), int(input('ingrese el numero de columna de la nueva matriz: '))) 
         #TODO: ciclo nuevo
-        print(CYAN+'='*60);opciones = int(input('realizar otra operacion\nOpcion 1: intercambio de fila\nOpcion 2: fila por un escalar\nOpcion 3: Operacion elemental entre filas\nOpcion 4: Mostar Matriz\n5: Cargar nueva Matriz\nPresionar 0 para finalizar el programa\nOpcion: '));print('='*60+WHITE)
+        print(CYAN+'='*60);opciones = int(input('realizar otra operacion\nOpcion 1: intercambio de fila\nOpcion 2: fila por un escalar\nOpcion 3: Operacion elemental entre filas\nOpcion 4: Mostar Matriz\nOpcion 5: Cargar nueva Matriz\nPresionar 0 para finalizar el programa\nOpcion: '));print('='*60+WHITE)
 main()
