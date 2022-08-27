@@ -1,7 +1,7 @@
 from fractions import Fraction
 from colores import RED, WHITE
 
-def printMatriz(matriz:list):
+def PrintMatriz(matriz:list):
     nuevaMatriz = []
     for i in range(len(matriz)):
         nuevaMatriz.append([])
